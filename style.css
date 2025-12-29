@@ -117,11 +117,24 @@ form{
 }
 
 label{
-    font-size: .7rem;
+    
     color: var(--Blue-800);
-    font-weight: 700;
+font-size: .7rem;
 }
 
 .error__btn{
     border: 1px solid hsla(4, 100%, 67%, 1);
+}
+
+.input__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-weight: 700;
+}
+
+.error__message{
+    color: var(--Red);
+    font-size: .7rem;
 }
