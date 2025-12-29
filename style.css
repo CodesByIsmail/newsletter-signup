@@ -50,7 +50,13 @@ p{
     font-family: roboto-regular;
 }
 
-input[type="text"]{
+.header__img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="email"]{
     background: transparent;
     border: solid 1px var(--Grey);
     padding:.8rem 1rem;
