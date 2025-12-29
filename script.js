@@ -2,6 +2,12 @@ const form = document.querySelector('form');
 const submitBtn = document.querySelector('.submit__btn');
 const emailInput = document.querySelector('.email__input')
 const errorMessage = document.querySelector('.error__message')
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+const successPage = document.querySelector('.success')
+const signupPage = document.querySelector('.signup')
+
+
 
 // form.addEventListener('submit', (e) => {
   
@@ -12,9 +18,32 @@ const errorMessage = document.querySelector('.error__message')
 // })
 
 form.addEventListener('submit', (e) => {
-if (emailInput.value === '' || ![...emailInput.value].includes('@')) {
+if (emailInput.value === '') {
    e.preventDefault()
    errorMessage.textContent = 'Valid Email is required'
-   emailInput.classList.add('error__btn')
+   emailInput.classList.add('error__btn');
+   emailInput.style.border = '1px solid red';
+   emailInput.style.background = '#FF62574A'
  }
+ 
+// emailInput.addEventListener('invalid', () => {
+//   errorMessage.textContent = 'Enter Valid Email'
+// })
+ 
+ if(!emailPattern.test(emailInput.value)){
+   e.preventDefault()
+  errorMessage.textContent = 'Valid Email is required'
+   emailInput.style.background = '#FF62574A'
+   emailInput.style.border = '1px solid red'
+ }
+ 
+ emailInput.addEventListener('input', () => {
+  errorMessage.textContent = '';
+   emailInput.style.border = '1px solid hsla(0, 0%, 58%, 1)'
+   emailInput.style.background = 'none'
+ })
+ 
+ successPage.style.display = 'block'
+ signupPage.style.display = 'none'
+ e.preventDefault()
 })

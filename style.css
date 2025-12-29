@@ -9,7 +9,7 @@
 :root {
     --Blue-800: hsla(234, 29%, 20%, 1);
     --Blue-700: hsl(235, 18%, 26%);
-    --Grey: hsl(0, 0%, 58%);
+    --Grey: hsla(0, 0%, 58%, 1);
     --White: hsl(0, 0%, 100%);
     
     --Red: hsla(4, 100%, 67%, 1);
@@ -56,7 +56,7 @@ p{
     margin: 0 auto;
 }
 
-input[type="email"]{
+input[type="text"]{
     background: transparent;
     border: solid 1px var(--Grey);
     padding:.8rem 1rem;
@@ -137,4 +137,15 @@ font-size: .7rem;
 .error__message{
     color: var(--Red);
     font-size: .7rem;
+}
+
+.success{
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
 }

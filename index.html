@@ -24,7 +24,7 @@
     </head>
     <body>
         <!-- Sign-up form start -->
-        <div class="signup">
+        <div class="signup hidden">
             <header>
                 <img
                     class="header__img"
@@ -47,21 +47,24 @@
     <form action="" method="get" accept-charset="utf-8">
 <div class="input__label">
       <label for="Email address">Email address</label>
+      <p class="error__message"></p>
 </div>
-      <input type="email" name="" class="email__input" placeholder="email@company.com">
+      <input type="text" name="" class="email__input" placeholder="email@company.com">
       
       <button type="submit" class="btn submit__btn">Subscribe to monthly newsletter</button>
     </form>
    
   </div>
 </main>
-        </div>
+</div>
 
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-
-        <div class="success hidden">
+<div>
+    
+</div>
+        <div class="success ">
             <img src="/assets/images/icon-success.svg" alt="" />
 
             <h1>Thanks for subscribing!</h1>
@@ -73,8 +76,8 @@
                 subscription.
             </p>
 
-            <button type="submit" class="btn">Dismiss message</button>
         </div>
+            <button type="submit" class="btn">Dismiss message</button>
 
         <!-- Success message end -->
         <!-- 
