@@ -1,10 +1,4 @@
-/* .attribution {
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
-} */
+
 
 :root {
     --Blue-800: hsla(234, 29%, 20%, 1);
@@ -37,6 +31,7 @@
 body{
     font-family: roboto-regular;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -69,6 +64,7 @@ input[type="text"]{
     padding:.8rem 1rem;
     border-radius: 5px;
     outline: none;
+    cursor: pointer;
 }
 
 .btn{
@@ -109,12 +105,11 @@ ul li::marker {
 }
 
 ul li{
-    /* display: flex; */
+
     padding-left: 1rem;
     font-family: roboto-regular;
     line-height: 1.6em;
-    /* list-style-image: url(/assets/images/icon-list.svg);
-    list-style-position: outside; */
+
 }
 
 form{
@@ -157,7 +152,7 @@ font-size: .7rem;
     gap: 1rem;
 }
 
-.success button{
+.dismiss__btn{
 width: 100%;
 margin-top: 7rem;
 }
@@ -166,6 +161,15 @@ margin-top: 7rem;
 display: none;
     }
 
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+.attribution a {
+    color: var(--Grey);
+}
 
 @media screen and (min-width: 45rem) {
     
@@ -215,11 +219,12 @@ display: none;
     
     .dismiss__btn {
     margin-top: 0;
-        
     }
-
     
-    .dismiss__btn:hover{
+    .btn:hover{
+        cursor: pointer;
         background-image: linear-gradient(to top right, #FF5F5F, #FF6257);
     }
 }
+
+
