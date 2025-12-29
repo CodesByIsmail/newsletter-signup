@@ -7,7 +7,7 @@ const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const successPage = document.querySelector('.success')
 const signupPage = document.querySelector('.signup')
 
-
+const userEmail = document.querySelector('.user__email')
 
 // form.addEventListener('submit', (e) => {
   
@@ -18,24 +18,29 @@ const signupPage = document.querySelector('.signup')
 // })
 
 form.addEventListener('submit', (e) => {
-if (emailInput.value === '') {
+if (emailInput.value === '' || !emailPattern.test(emailInput.value) ) {
    e.preventDefault()
    errorMessage.textContent = 'Valid Email is required'
    emailInput.classList.add('error__btn');
    emailInput.style.border = '1px solid red';
    emailInput.style.background = '#FF62574A'
+ } else {
+   successPage.style.display = 'flex'
+ signupPage.style.display = 'none'
+ e.preventDefault()
+ userEmail.textContent = emailInput.value
  }
  
 // emailInput.addEventListener('invalid', () => {
 //   errorMessage.textContent = 'Enter Valid Email'
 // })
  
- if(!emailPattern.test(emailInput.value)){
-   e.preventDefault()
-  errorMessage.textContent = 'Valid Email is required'
-   emailInput.style.background = '#FF62574A'
-   emailInput.style.border = '1px solid red'
- }
+// if(!emailPattern.test(emailInput.value)){
+//   e.preventDefault()
+//   errorMessage.textContent = 'Valid Email is required'
+//   emailInput.style.background = '#FF62574A'
+//   emailInput.style.border = '1px solid red'
+// }
  
  emailInput.addEventListener('input', () => {
   errorMessage.textContent = '';
@@ -43,7 +48,6 @@ if (emailInput.value === '') {
    emailInput.style.background = 'none'
  })
  
- successPage.style.display = 'block'
- signupPage.style.display = 'none'
- e.preventDefault()
+ 
 })
+
