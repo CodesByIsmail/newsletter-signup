@@ -165,10 +165,10 @@ display: none;
 .attribution {
     font-size: 11px;
     text-align: center;
-    color: var(--White);
+    color: var(--Grey);
 }
 .attribution a {
-    color: var(--Grey);
+    color: var(--Blue-700);
 }
 
 @media screen and (min-width: 45rem) {
@@ -225,6 +225,15 @@ display: none;
         cursor: pointer;
         background-image: linear-gradient(to top right, #FF5F5F, #FF6257);
     }
+    
+    .attribution {
+        margin-top: 3rem;
+    color: var(--White);
+}
+
+ .attribution a {
+    color: var(--Grey);
+}
 }
 
 
