@@ -15,5 +15,6 @@ form.addEventListener('submit', (e) => {
 if (emailInput.value === '' || ![...emailInput.value].includes('@')) {
    e.preventDefault()
    errorMessage.textContent = 'Valid Email is required'
+   emailInput.classList.add('error__btn')
  }
 })
