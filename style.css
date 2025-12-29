@@ -36,6 +36,10 @@
 }
 body{
     font-family: roboto-regular;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 h1{
@@ -177,11 +181,45 @@ display: none;
         display: block;
     }
     
-    .signup{
+   /*  .signup{
+       display: flex;
+       flex-flow: row-reverse;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       
+   } */
+    
+   .signup__container {
+        background: var(--White);
         display: flex;
         flex-flow: row-reverse;
-        justify-content: center;
         align-items: center;
-        height: 100vh;
+        gap: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    
+    .hero{
+        padding: 1rem;
+    }
+    
+    .success{
+        background: var(--White);
+        border-radius: 1rem;
+        max-width: 450px;
+        height: fit-content;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .dismiss__btn {
+    margin-top: 0;
+        
+    }
+
+    
+    .dismiss__btn:hover{
+        background-image: linear-gradient(to top right, #FF5F5F, #FF6257);
     }
 }
