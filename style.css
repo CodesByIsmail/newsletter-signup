@@ -224,6 +224,8 @@ display: none;
     .btn:hover{
         cursor: pointer;
         background-image: linear-gradient(to top right, #FF5F5F, #FF6257);
+        
+        box-shadow: 0 4px 8px #FF5F5F;
     }
     
     .attribution {
