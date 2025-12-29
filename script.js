@@ -8,6 +8,9 @@ const successPage = document.querySelector('.success')
 const signupPage = document.querySelector('.signup')
 
 const userEmail = document.querySelector('.user__email')
+const dismissBtn = document.querySelector('.dismiss__btn')
+
+
 
 // form.addEventListener('submit', (e) => {
   
@@ -47,7 +50,11 @@ if (emailInput.value === '' || !emailPattern.test(emailInput.value) ) {
    emailInput.style.border = '1px solid hsla(0, 0%, 58%, 1)'
    emailInput.style.background = 'none'
  })
- 
- 
 })
 
+dismissBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  successPage.style.display = 'none'
+ signupPage.style.display = 'block'
+ emailInput.value = ''
+})
